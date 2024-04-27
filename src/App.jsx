@@ -16,7 +16,7 @@ const NotFoundPage = lazy(
   () => import("./pages/NotFoundPage/NotFoundPage.jsx"),
 );
 
-export export App = () =>{
+export const App = () =>{
   return (
   
      
