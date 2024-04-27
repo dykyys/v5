@@ -12,7 +12,7 @@ import { useLoading } from "../../context/LoadingContext";
 const MoviesPage = () => {
   const [movies, setMovies] = useState([]);
   const [searchParams] = useSearchParams();
-  const { setIsLoading } = useLoading();
+ 
 
   useEffect(() => {
     const query = searchParams.get("query");
@@ -21,7 +21,7 @@ const MoviesPage = () => {
 
     const controller = new AbortController();
 
-    setIsLoading(true);
+
 
     getMoviesByQuery(query, controller.signal)
       .then((res) => {
@@ -32,12 +32,12 @@ const MoviesPage = () => {
         setMovies(res);
       })
       .catch((error) => console.log(error))
-      .finally(() => setIsLoading(false));
+    
 
     return () => {
       controller.abort();
     };
-  }, [searchParams, setIsLoading]);
+  }, [searchParams]);
 
   return (
     <main>
