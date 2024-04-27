@@ -1,6 +1,6 @@
-import { lazy } from "react";
+
 import { Route, Routes } from "react-router-dom";
-import PAGE_NAMES from "./router/paths";
+
 
 import HeaderLayout from "./layouts/HeaderLayout/HeaderLayout";
 
