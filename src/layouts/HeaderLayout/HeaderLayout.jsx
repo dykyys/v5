@@ -1,8 +1,5 @@
 import { Suspense } from "react";
-import { NavLink, Outlet} from "react-router-dom";
-
-
-import Heading from "../../components/Heading/Heading";
+import { Link, Outlet} from "react-router-dom";
 
 
 const HeaderLayout = () => {
@@ -15,27 +12,25 @@ const HeaderLayout = () => {
          
 
           <nav>
-            <NavLink
+            <Link
             
              to="/"
              
             >
               Home
-            </NavLink>
+            </Link>
 
-            <NavLink
+            <Link
              
-              to="movies"
+              to="/movies"
             >
               Movies
-            </NavLink>
+            </Link>
           </nav>
         </div>
       </header>
 
-      <Suspense
-        fallback={ null  }
-      >
+      <Suspense>
         <Outlet />
       </Suspense>
     </div>
