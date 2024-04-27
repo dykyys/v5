@@ -3,8 +3,7 @@ import { NavLink, Outlet} from "react-router-dom";
 
 
 import Heading from "../../components/Heading/Heading";
-import Spinner from "../../components/Spinner/Spinner";
-import PAGE_NAMES from "../../router/paths";
+
 
 const HeaderLayout = () => {
 
