@@ -10,17 +10,15 @@ const HomePage = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    const controller = new AbortController();
+   
 
-    getTrendingMovies(controller.signal)
+    getTrendingMovies()
       .then((res) => {
         setMovies(res);
       })
       .catch((error) => console.error(error.message));
 
-    return () => {
-      controller.abort();
-    };
+    
   }, []);
 
   return (
