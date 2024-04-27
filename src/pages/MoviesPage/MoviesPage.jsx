@@ -7,7 +7,7 @@ import Form from "../../components/Form/Form";
 import Gallery from "../../components/Gallery/Gallery";
 
 import { getMoviesByQuery } from "../../services/movieDBApi";
-import { useLoading } from "../../context/LoadingContext";
+
 
 const MoviesPage = () => {
   const [movies, setMovies] = useState([]);
