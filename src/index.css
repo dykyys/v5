@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: inherit;
+}
+
+.active {
+  background-color: white;
+  border-radius: 30px;
+  color: #374151;
+}
+
+@layer utilities {
+  .grid-cols-gallery-movie {
+    max-width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 0.8fr));
+  }
+
+  .grid-cols-gallery-cast {
+    max-width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 0.8fr));
+  }
+  .scale-101 {
+    scale: 1.01;
+  }
+}
+
+@layer base {
+  body {
+    @apply m-0 min-h-screen min-w-80 max-w-full overflow-x-hidden bg-slate-200 text-gray-800;
+  }
+}
