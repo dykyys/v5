@@ -18,16 +18,12 @@ const searchParams = new URLSearchParams({
   api_key: API_KEY,
 });
 
-const getTrendingMovies = async (signal) => {
-  try {
-    const { data } = await axios.get(`${ENDPOINTS.trending}?${searchParams}`, {
-      signal,
-    });
+const getTrendingMovies = async () => {
+
+    const { data } = await axios.get(`${ENDPOINTS.trending}?${searchParams}`);
 
     return data.results;
-  } catch (error) {
-    handleFetchErrors(error);
-  }
+  
 };
 
 const getMovieById = async (id, signal) => {
