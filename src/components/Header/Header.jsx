@@ -1,59 +1,23 @@
-import { Suspense } from 'react';
-import {
-  Link,
-  NavLink,
-  Outlet,
-  useLocation,
-  useNavigate,
-} from 'react-router-dom';
-import { RiMovie2Fill } from 'react-icons/ri';
+import { NavLink, Outlet } from 'react-router-dom';
 
-export const HeaderLayout = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  const onLogoClick = () => {
-    navigate('/', { state: { from: location } });
-  };
-
+export const Header = () => {
   return (
-    <div className=" ml-auto mr-auto ">
-      <header className="relative w-screen bg-white py-2 shadow-sm shadow-slate-300">
-        <div className="flex items-center justify-center">
-          <Link
-            css={'absolute left-5 hover:cursor-pointer text-5xl font-bold'}
-            level={1}
-            onClick={onLogoClick}
-            title="To Home page"
-          >
-            <span className="flex items-center gap-2 text-slate-700">
-              <RiMovie2Fill className="h-12 w-12 fill-slate-700" />
-              MDB
-            </span>
-          </Link>
-
-          <nav className="flex justify-center gap-5 rounded-full bg-slate-700 px-9 py-1 text-lg">
-            <NavLink
-              className="px-4 py-2 text-white transition-all duration-200"
-              to={'/'}
-              end
-            >
-              Home
-            </NavLink>
-
-            <NavLink
-              className="px-4 py-2 text-white transition-all duration-200"
-              to={'/movies'}
-            >
-              Movies
-            </NavLink>
+    <>
+      <header>
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <NavLink to="/">Home</NavLink>
+              </li>
+              <li>
+                <NavLink to="/movies">movies</NavLink>
+              </li>
+            </ul>
           </nav>
         </div>
       </header>
-
-      <Suspense fallback={null}>
-        <Outlet />
-      </Suspense>
-    </div>
+      <Outlet />
+    </>
   );
 };
