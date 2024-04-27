@@ -3,7 +3,7 @@ import { NavLink, Outlet } from 'react-router-dom';
 export const Header = () => {
   return (
     <>
-      <header>
+      <header className="relative w-screen bg-white py-2 shadow-sm shadow-slate-300">
         <div>
           <nav>
             <ul>
