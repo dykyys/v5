@@ -23,7 +23,7 @@ function App() {
       <Routes>
         <Route path={PAGE_NAMES.homepage} element={ <HeaderLayout />}>
           
- <Route index element={ <HomePage />}>
+ <Route index element={ <HomePage />}/>
           <Route path={PAGE_NAMES.movies} element={<MoviesPage />} />
 
           <Route path={PAGE_NAMES.movieDetails} element={<MovieDetailsPage />}>
