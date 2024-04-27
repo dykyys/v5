@@ -21,7 +21,7 @@ function App() {
     <>
       <Routes>
         <Route path={PAGE_NAMES.homepage} element={<HeaderLayout />}>
-          <Route index element={<HomePage />} />
+          
 
           <Route path={PAGE_NAMES.movies} element={<MoviesPage />} />
 
@@ -32,6 +32,7 @@ function App() {
 
           <Route path="*" element={<NotFoundPage />} />
         </Route>
+        <Route path={PAGE_NAMES.homepage} element={<HomePage />} />
       </Routes>
 
       <Toaster position="top-right" />
