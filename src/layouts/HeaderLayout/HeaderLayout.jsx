@@ -50,11 +50,7 @@ const HeaderLayout = () => {
       </header>
 
       <Suspense
-        fallback={
-          <div className="flex items-center justify-center p-10">
-            <Spinner css={"h-32 w-32 opacity-75"} />
-          </div>
-        }
+        fallback={ null  }
       >
         <Outlet />
       </Suspense>
