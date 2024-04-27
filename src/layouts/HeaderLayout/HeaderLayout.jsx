@@ -1,18 +1,13 @@
 import { Suspense } from "react";
-import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
-import { RiMovie2Fill } from "react-icons/ri";
+import { NavLink, Outlet} from "react-router-dom";
+
 
 import Heading from "../../components/Heading/Heading";
 import Spinner from "../../components/Spinner/Spinner";
 import PAGE_NAMES from "../../router/paths";
 
 const HeaderLayout = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
 
-  const onLogoClick = () => {
-    navigate("/", { state: { from: location } });
-  };
 
   return (
     <div >
@@ -23,7 +18,7 @@ const HeaderLayout = () => {
           <nav>
             <NavLink
             
-              to={PAGE_NAMES.homepage}
+             to="/"
              
             >
               Home
@@ -31,7 +26,7 @@ const HeaderLayout = () => {
 
             <NavLink
              
-              to={PAGE_NAMES.movies}
+              to="movies"
             >
               Movies
             </NavLink>
