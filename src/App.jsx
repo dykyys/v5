@@ -23,8 +23,8 @@ function App() {
       <Routes>
         <Route path={PAGE_NAMES.homepage} element={ <HeaderLayout />}>
           
- <Route index element={ <HomePage />}/>
-          <Route path={PAGE_NAMES.movies} element={<MoviesPage />} />
+           <Route index element={ <h1>home</h1>}/>
+          <Route path={PAGE_NAMES.movies} element={<h1>movies</h1>} />
 
           <Route path={PAGE_NAMES.movieDetails} element={<MovieDetailsPage />}>
             <Route path={PAGE_NAMES.cast} element={<Cast />} />
