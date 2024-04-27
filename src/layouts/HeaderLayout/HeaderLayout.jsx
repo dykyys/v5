@@ -15,32 +15,22 @@ const HeaderLayout = () => {
   };
 
   return (
-    <div className=" ml-auto mr-auto ">
-      <header className="relative w-screen bg-white py-2 shadow-sm shadow-slate-300">
-        <div className="flex items-center justify-center">
-          <Heading
-            css={"absolute left-5 hover:cursor-pointer text-5xl font-bold"}
-            level={1}
-            onClick={onLogoClick}
-            title="To Home page"
-          >
-            <span className="flex items-center gap-2 text-slate-700">
-              <RiMovie2Fill className="h-12 w-12 fill-slate-700" />
-              MDB
-            </span>
-          </Heading>
+    <div >
+      <header>
+        <div >
+         
 
-          <nav className="flex justify-center gap-5 rounded-full bg-slate-700 px-9 py-1 text-lg">
+          <nav>
             <NavLink
-              className="px-4 py-2 text-white transition-all duration-200"
+            
               to={PAGE_NAMES.homepage}
-              end
+             
             >
               Home
             </NavLink>
 
             <NavLink
-              className="px-4 py-2 text-white transition-all duration-200"
+             
               to={PAGE_NAMES.movies}
             >
               Movies
