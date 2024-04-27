@@ -25,7 +25,7 @@ export const App = () =>{
           
            <Route index element={ <h1>home</h1>}/>
           <Route path={'movies'} element={<h1>movies</h1>} />
-
+ </Route>
       </Routes>
 
   
